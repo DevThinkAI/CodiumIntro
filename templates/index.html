@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Weather App</h2>
+
+<form method="POST">
+  <label for="postal_code">Enter your postal code:</label><br>
+  <input type="text" id="postal_code" name="postal_code"><br>
+  <input type="submit" value="Submit">
+</form>
+
+{% if weather %}
+    <h2>Weather Information</h2>
+    <p>{{ weather['main'] }}</p>
+    <p>Temperature: {{ weather['main']['temp'] }} Kelvin</p>
+{% endif %}
+
+</body>
+</html>
