@@ -14,7 +14,7 @@ def index():
         return render_template('index.html')
 
 def get_weather(postal_code):
-    api_key = "35e3797f7462621c940662fb3f6ade7a"
+    api_key = ""
     base_url = "http://api.openweathermap.org/data/2.5/weather"
     complete_url = base_url + "?appid=" + api_key + "&zip=" + postal_code
     response = requests.get(complete_url)
